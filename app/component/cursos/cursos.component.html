@@ -1,0 +1,16 @@
+<hr>
+<div class="page-header">
+  <h1>DÌAS SAGRADOS DEL CALENDARIO MAYA</h1>
+</div>
+<div class="row">
+  <div class="col-md-4" *ngFor='let curso of cursos'>
+  <div class="card">
+    <div class="card-body">
+     <a [routerLink]="['/curso',curso.id]"><img src="../../../assets/imagenes/{{curso.imagen}}" class="img-responsive" alt=""></a>
+    </div>
+    <div class="card-footer text-muted">
+      {{curso.nombre}}
+    </div>
+  </div>
+  </div>
+</div>

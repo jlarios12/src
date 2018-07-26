@@ -1,0 +1,32 @@
+
+
+<hr>
+<br>
+<div class="page-header">
+  <h2>{{curso[0].nombre}}</h2>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <div class="card">
+      <div class="card-body" >
+          <img src="../../../assets/imagenes/{{curso[0].imagen}}" id="imh" class="img-info img-responsive" alt="">
+        </div>
+      <div class="card-footer">
+        {{curso[0].nombre}}
+        <img src="../../../assets/imagenes/{{curso[0].simbolo}}" id="imh" class="img-simbolo img-responsive" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="info">
+    <p>{{curso[0].valor}}</p>
+    <p>{{curso[0].significado}}</p>
+    <br>
+    <ul class="pager">
+      <li id="sc" class="previous">
+        <a [routerLink]="['/cursos']">&larr; Volver</a>
+      </li>
+    </ul>
+    </div>
+  </div>
+</div>

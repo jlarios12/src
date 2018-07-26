@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>GT en Codigo</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+   
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+
+    <script>
+      $scope.scrollPos = {}; // scroll position of each view
+
+        $(window).on('scroll', function () {
+          if ($scope.okSaveScroll) { // false between $routeChangeStart and $routeChangeSuccess
+            $scope.scrollPos[$location.path()] = $(window).scrollTop();
+            //console.log($scope.scrollPos);
+          }
+        });
+
+        $scope.scrollClear = function (path) {
+          $scope.scrollPos[path] = 0;
+        }
+
+        $scope.$on('$routeChangeStart', function () {
+          $scope.okSaveScroll = false;
+        });
+
+        $scope.$on('$routeChangeSuccess', function () {
+          $timeout(function () { // wait for DOM, then restore scroll position
+            $(window).scrollTop($scope.scrollPos[$location.path()] ? $scope.scrollPos[$location.path()] : 0);
+            $scope.okSaveScroll = true;
+          }, 0);
+        });
+    </script>
+</body>
+</html>

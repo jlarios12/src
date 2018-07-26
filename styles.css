@@ -1,0 +1,97 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(assets/imagenes/guatemala-1971375.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 30px;
+    font-family: 'ABeeZee', sans-serif;
+}
+.jumbotron{
+    margin-top:70px;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: ghostwhite;
+   padding: 20px;
+}
+.btn:hover{
+color:green;
+}
+hr{
+    margin-top: 2px;
+    color: white;
+}
+.previous{
+    font-size:10px ;
+}
+p{
+    font-size:20px;
+
+}
+.img-responsive{
+    margin-top:5px;
+    margin: auto;
+    display: flex;
+    width: 500px;
+    height: 200px;
+}
+.card{
+    text-align: center;
+    margin-top: 10px;
+}
+.card-footer{
+    background-color: rgba(0, 0, 0, 0.63);
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+}
+
+.page-header{
+    margin-top: -40px;
+}
+.info{
+    background-color: rgba(0, 0, 0, 0.678);
+    padding:20px;
+}
+.info p{
+font-size: 16px;
+text-align: justify;
+color: whitesmoke;
+}
+.img-info{
+    width: 700px;
+    height: 380px;
+}
+.img-simbolo{
+    width: 50px;
+    height: 50px;
+    display:inline-flex;
+    border-radius: 40%;
+}
+h1{
+    margin-top: 45px;
+    color: whitesmoke;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 25px;
+    margin-bottom: 2px;
+}
+h2{
+    margin-top: 10px;
+    color: whitesmoke;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 25px;
+    margin-bottom: 2px;
+}
+
+.pager{
+    margin-top: 2px;
+}
+
+

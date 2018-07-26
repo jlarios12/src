@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h1>¡Hola!, he encontrado esto para ti...</h1>
+</div>
+<div class="alert alert-dismissible alert-warning" *ngIf='curso == 0'>
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4>oooops!</h4>
+  <p>Aun no crack, hay que dominar  html,css y js para dar el siguiente paso!!!!</p>
+</div>
+<hr>
+<div class="row">
+  <div class="col-md-4" *ngFor='let curso of curso'>
+    <div class="card">
+      <div class="card-body">
+        <a [routerLink]="['/curso',curso.id]">
+          <img src="../../../assets/imagenes/{{curso.imagen}}" class="img-responsive" alt="">
+        </a>
+      </div>
+      <div class="card-footer text-muted">
+        {{curso.nombre}}
+      </div>
+    </div>
+  </div>
+</div>
